@@ -1,5 +1,5 @@
 # 🌿 GreenPulse Management System!
-[Dashboard del Sistema](dashboard.png)
+![Tablero del Sistema](tablero.png)
 
 ![Dashboard]
 
