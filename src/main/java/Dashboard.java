@@ -55,19 +55,20 @@ public class Dashboard extends JFrame {
         lateral.setPreferredSize(new Dimension(320, 600));
         lateral.setBorder(new EmptyBorder(30, 25, 30, 25));
 
-        // Tarjeta de Métrica
-        JPanel cardMétrica = new JPanel(new GridBagLayout());
-        cardMétrica.setBackground(new Color(240, 253, 244));
-        cardMétrica.setBorder(BorderFactory.createLineBorder(verdePrimario, 1));
-        cardMétrica.setMaximumSize(new Dimension(280, 80));
+        // Tarjeta de Métrica (Corregido: variable unificada como cardMetrica)
+        JPanel cardMetrica = new JPanel(new GridBagLayout());
+        cardMetrica.setBackground(new Color(240, 253, 244));
+        cardMetrica.setBorder(BorderFactory.createLineBorder(verdePrimario, 1));
+        cardMetrica.setMaximumSize(new Dimension(280, 80));
+
         lblTotal = new JLabel("0 Usuarios");
         lblTotal.setFont(new Font("Segoe UI", Font.BOLD, 22));
         lblTotal.setForeground(verdePrimario);
-        cardMétrica.add(lblTotal);
+        cardMetrica.add(lblTotal);
 
         lateral.add(new JLabel("ESTADÍSTICAS GLOBALES"));
         lateral.add(Box.createVerticalStrut(10));
-        lateral.add(cardMétrica);
+        lateral.add(cardMetrica);
         lateral.add(Box.createVerticalStrut(30));
 
         // Campos de entrada
@@ -130,7 +131,6 @@ public class Dashboard extends JFrame {
         String n = txtNombre.getText();
         String c = txtCorreo.getText();
 
-        // Validación Profesional con Regex
         String emailPattern = "^[A-Za-z0-9+_.-]+@(.+)$";
         if (n.isEmpty() || !Pattern.compile(emailPattern).matcher(c).matches()) {
             JOptionPane.showMessageDialog(this, "Datos inválidos. Verifique el formato del correo.");
