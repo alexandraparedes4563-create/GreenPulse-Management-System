@@ -1,7 +1,6 @@
 # 🌿 GreenPulse Management System!
-![Tablero del Sistema](Tablero.png)
+(Tablero.png)
 
-![Dashboard]
 
 **Sistema de gestión ambiental con Java Swing y Firebase Realtime Database.**
 
